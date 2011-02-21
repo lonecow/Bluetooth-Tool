@@ -51,13 +51,13 @@ public:
 	void test_getAdapterName()
 	{
 		Adapter test_adapter;
-		TS_ASSERT_DIFFERS(std::string(""), test_adapter.getAdapterName());
+		TS_ASSERT_DIFFERS(std::string(""), test_adapter.getName());
 	}
 
 	void test_getAdapterAddress()
 	{
 		Adapter test_adapter;
-		TS_ASSERT_DIFFERS(std::string(""), test_adapter.getAdapterAddress());
+		TS_ASSERT_DIFFERS(std::string(""), test_adapter.getAddress());
 	}
 
 	void test_bad_adapter_doesnt_work()
@@ -69,13 +69,13 @@ public:
 	void test_bad_adapter_blank_address()
 	{
 		Adapter test_adapter(std::string("01:01:01:01:01:01"));
-		TS_ASSERT_EQUALS(std::string(""), test_adapter.getAdapterAddress());
+		TS_ASSERT_EQUALS(std::string(""), test_adapter.getAddress());
 	}
 
 	void test_bad_adapter_blank_name()
 	{
 		Adapter test_adapter(std::string("01:01:01:01:01:01"));
-		TS_ASSERT_EQUALS(std::string(""), test_adapter.getAdapterName());
+		TS_ASSERT_EQUALS(std::string(""), test_adapter.getName());
 	}
 };
 

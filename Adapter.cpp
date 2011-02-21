@@ -69,12 +69,12 @@ bool Adapter::isAttached()
 	return m_attached;
 }
 
-std::string Adapter::getAdapterName()
+std::string Adapter::getName()
 {
 	return std::string(m_device_info.name);
 }
 
-std::string Adapter::getAdapterAddress()
+std::string Adapter::getAddress()
 {
 	char buffer[256] = {0};
 

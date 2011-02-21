@@ -12,10 +12,14 @@ public:
 	Adapter(const std::string & address);
 	~Adapter();
 
+	/** @brief indicates weather or not we were able to find an adapter */
 	bool isAttached();
 
-	std::string getAdapterName();
-	std::string getAdapterAddress();
+	/** @brief Gets this adapters short Name */
+	std::string getName();
+
+	/** @brief Gets this Adapters Name */
+	std::string getAddress();
 private:
 	void init();
 	void cleanup();
