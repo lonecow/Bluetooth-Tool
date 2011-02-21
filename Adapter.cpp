@@ -7,13 +7,13 @@
 Adapter::Adapter()
 {
 	init();
-	OpenAdapter("");
+	openAdapter("");
 }
 
 Adapter::Adapter(const std::string & address)
 {
 	init();
-	OpenAdapter(address);
+	openAdapter(address);
 }
 
 Adapter::~Adapter()
@@ -37,7 +37,7 @@ void Adapter::cleanup()
 	m_attached = false;
 }
 
-void Adapter::OpenAdapter(const std::string & address)
+void Adapter::openAdapter(const std::string & address)
 {
 	if(address != "")
 		m_dev_num = hci_devid(address.c_str());

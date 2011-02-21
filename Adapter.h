@@ -20,7 +20,8 @@ private:
 	void init();
 	void cleanup();
 
-	void OpenAdapter(const std::string & address);
+	/** @brief Opens Adapter given an Address */
+	void openAdapter(const std::string & address);
 
 private:
 	bdaddr_t m_bluetooth_address;
