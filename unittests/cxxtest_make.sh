@@ -4,7 +4,7 @@
 
 g++ -ggdb2 -o runner \
 	runner.cpp \
-	../BluetoothAdapter.cpp \
+	../Adapter.cpp \
 	-I . \
 	-I .. \
 	-I /usr/include \

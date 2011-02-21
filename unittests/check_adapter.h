@@ -12,7 +12,7 @@
  *
  */
 
-#include "BluetoothAdapter.h"
+#include "Adapter.h"
 
 class check_adapter : public CxxTest::TestSuite
 {

@@ -1,5 +1,5 @@
 
-#include "BluetoothAdapter.h"
+#include "Adapter.h"
 
 #include <bluetooth/hci.h>
 #include <bluetooth/hci_lib.h>

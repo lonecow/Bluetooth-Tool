@@ -1,5 +1,5 @@
-#ifndef _BLUETOOTHADAPTER_H_
-#define _BLUETOOTHADAPTER_H_
+#ifndef _ADAPTER_H_
+#define _ADAPTER_H_
 
 #include <string>
 #include <bluetooth/bluetooth.h>
