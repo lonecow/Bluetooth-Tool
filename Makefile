@@ -6,7 +6,8 @@ LDFLAGS := $(LDFLAGS) -lbluetooth
 
 #SIMPLE_SCAN_C := simplescan.c
 
-BLUETOOTH_CPP := 	BluetoothAdapter.cpp \
+BLUETOOTH_CPP := 	Adapter.cpp \
+			Device.cpp \
 			simplescan.cpp
 
 simplescan: $(BLUETOOTH_CPP)

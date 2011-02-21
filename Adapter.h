@@ -2,8 +2,11 @@
 #define _ADAPTER_H_
 
 #include <string>
+#include <vector>
 #include <bluetooth/bluetooth.h>
 #include <bluetooth/hci.h>
+
+#include "Device.h"
 
 class Adapter
 {
@@ -20,6 +23,9 @@ public:
 
 	/** @brief Gets this Adapters Name */
 	std::string getAddress();
+
+	/** @brief scan for and return devices */
+	void scanForDevices(std::vector<Device> & devices);
 private:
 	void init();
 	void cleanup();
