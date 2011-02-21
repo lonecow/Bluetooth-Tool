@@ -13,5 +13,5 @@ g++ -ggdb2 -o runner \
 make_ret_code="$?"
 
 if [ $make_ret_code -eq 0 ]; then
-	./runner
+	valgrind --leak-check=full -q --num-callers=40 ./runner
 fi
