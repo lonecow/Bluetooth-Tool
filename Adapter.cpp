@@ -19,6 +19,7 @@ Adapter::Adapter(const std::string & address)
 Adapter::~Adapter()
 {
 	cleanup();
+
 }
 
 void Adapter::init()
@@ -27,12 +28,18 @@ void Adapter::init()
 	memset(&m_device_info, 0, sizeof(m_device_info));
 	m_dev_num = -1;
 	m_attached = false;
+	m_adapter_sock = -1;
 }
 
 void Adapter::cleanup()
 {
 	memset(&m_bluetooth_address, 0, sizeof(m_bluetooth_address));
 	memset(&m_device_info, 0, sizeof(m_device_info));
+
+	if (isAttached())
+		hci_close_dev(m_adapter_sock);
+
+	m_adapter_sock = -1;
 	m_dev_num = -1;
 	m_attached = false;
 }
