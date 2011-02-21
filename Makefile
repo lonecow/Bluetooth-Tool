@@ -1,13 +1,16 @@
 
 CXXFLAGS := $(CXXFLAGS) -Wall
-CXXFLAGS := $(CXXFLAGS) -I .
+CXXFLAGS := $(CXXFLAGS) -I . -I /usr/include
 LDFLAGS := $(LDFLAGS) -lbluetooth
 
 
-SIMPLE_SCAN_C := simplescan.c
+#SIMPLE_SCAN_C := simplescan.c
 
-simplescan: $(SIMPLE_SCAN_C)
-	gcc $(CXXFLAGS) -o $@ $(SIMPLE_SCAN_C) $(LDFLAGS)
+BLUETOOTH_CPP := 	BluetoothAdapter.cpp \
+			simplescan.cpp
+
+simplescan: $(BLUETOOTH_CPP)
+	g++ $(CXXFLAGS) -o $@ $(SIMPLE_SCAN_C) $(BLUETOOTH_CPP) $(LDFLAGS)
 
 clean:
 	rm -f *.o simplescan

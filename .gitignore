@@ -1,2 +1,5 @@
 /simplescan
 /tags
+/unittests/runner.cpp
+/unittests/.kdbgrc.runner
+/unittests/runner
