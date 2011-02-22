@@ -1,10 +1,11 @@
 #!/bin/bash
 
-./cxxtest/cxxtestgen.py --error-printer -o runner.cpp check_adapter.h
+./cxxtest/cxxtestgen.py --error-printer -o runner.cpp check_*.h
 
 g++ -ggdb2 -o runner \
 	runner.cpp \
 	../Adapter.cpp \
+	../Device.cpp \
 	-I . \
 	-I .. \
 	-I /usr/include \

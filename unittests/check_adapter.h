@@ -1,5 +1,5 @@
-#ifndef __CHECK_SOCKET_H__
-#define __CHECK_SOCKET_H__
+#ifndef __CHECK_ADAPTER_H__
+#define __CHECK_ADAPTER_H__
 
 #include <cxxtest/TestSuite.h>
 
