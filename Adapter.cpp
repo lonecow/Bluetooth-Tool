@@ -10,6 +10,8 @@ Adapter::Adapter()
 	openAdapter("");
 }
 
+
+
 Adapter::Adapter(const std::string & address)
 {
 	init();
